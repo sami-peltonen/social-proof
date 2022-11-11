@@ -1,0 +1,285 @@
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {
+//     ...
+// }
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {
+//     ...
+// }
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {
+//     ...
+// }
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {
+//     ...
+// }
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {
+//     ...
+// }
+
+
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 2.5rem;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'League Spartan', sans-serif;
+
+    @media only screen and (max-width: 1500px) {
+        font-size: 2rem;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.3rem;
+    }
+}
+
+h1 {
+    font-size: 6rem;
+
+    @media only screen and (max-width: 1500px) {
+        font-size: 5rem;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        font-size: 4rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+        font-size: 3rem;
+    }
+}
+
+img {
+    border-radius: 50%;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 80%;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        margin: 0rem 0rem;
+    }
+}
+
+.top-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10rem;
+
+    @media only screen and (max-width: 768px) {
+        height: unset;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+}
+
+.promise {
+    padding: 3rem 10% 3rem 0rem;
+    width: 50%;
+
+    h1 {
+        color: hsl(300, 43%, 22%);
+    }
+
+    p {
+        margin-top: 3rem;
+        width: 75%;
+        color: hsl(303, 10%, 53%);
+
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
+
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 0rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.rated {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 0rem 0rem 0rem 2rem;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        margin: 2rem 0rem;
+        padding: 0rem;
+    }
+}
+
+.rate {
+    min-width: 40%;
+    border-radius: 1rem;
+    margin: .5rem;
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: hsl(300, 24%, 96%);
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+
+    @media only screen and (max-width: 768px) {    
+        margin: 1rem 2rem;
+        align-self: unset;
+    }
+
+    &:nth-of-type(1) {
+        align-self: flex-start;
+    }
+
+    &:nth-of-type(2) {
+        align-self: center;
+    }
+
+    &:nth-of-type(3) {
+        align-self: flex-end;
+    }
+
+    @media only screen and (max-width: 768px) {
+        &:nth-of-type(1) {
+            align-self: unset;
+        }
+
+        &:nth-of-type(2) {
+            align-self: unset;
+        }
+
+        &:nth-of-type(3) {
+            align-self: unset;
+        }
+    }
+}
+
+.stars {
+    display: flex;
+}
+
+.rate-text {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 2rem;
+}
+
+.bottom-container {
+    height: 35rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: 768px) {
+        height: unset;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+//min-height sets the containers the same height as bottom-container, if it has display:flex
+.proof {
+    border-radius: 1rem;
+    padding: 5rem 3rem;
+    background-color: hsl(300, 43%, 22%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+
+    @media only screen and (max-width: 768px) {
+        padding: 2rem 2rem;
+        margin: 0rem 2rem;
+    }
+
+    &:nth-of-type(1) {
+        align-self: flex-start;
+    }
+
+    &:nth-of-type(2) {
+        align-self: center;
+        margin-right: 3rem;
+        margin-left: 3rem;
+
+        @media only screen and (max-width: 768px) {
+            margin: 2rem 2rem;
+        }
+    }
+
+    &:nth-of-type(3) {
+        align-self: flex-end;
+    }
+
+    .details {
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .title {
+            color: hsl(333, 80%, 67%);
+        }
+    }
+}
+
+.portrait {
+    
+    img {
+        @media only screen and (max-width: 1000px) {
+            width: 30px;
+        }
+    }
+}
+
+.parent {
+    display: flex;
+}
+
+.child1 {
+    flex: 1;
+}
+
+.child2 {
+    flex: 1;
+}
